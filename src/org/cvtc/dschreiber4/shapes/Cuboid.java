@@ -1,4 +1,4 @@
-package org.cvtc.shapes;
+package org.cvtc.dschreiber4.shapes;
 
 import javax.swing.*;
 
@@ -53,7 +53,7 @@ public class Cuboid extends Shape {
     //Overloads
     @Override
     public float surfaceArea() {
-        float sA = 2 * (depth * width + depth * height + width * height);
+        float sA = 2 * ((depth * width) + (depth * height) + (width * height));
         return sA;
     }
 
@@ -67,15 +67,12 @@ public class Cuboid extends Shape {
     @Override
     void render() {
 
-        String message = "Shape: Cuboid\n";
-        message += "Dimensions: \n";
-        message += "Width is " + width + ". \n";
-        message += "Height is " + height + ". \n";
-        message += "Depth is " + depth + ". \n";
-        message += "Surface Area is " + surfaceArea() + ". \n";
-        message += "Volume is " + volume() + ". \n";
-
-
+        String message = "Shape: Cuboid\n" +
+        "Dimensions: \n" + "Width is " + width + ". \n" +
+        "Height is " + height + ". \n" +
+        "Depth is " + depth + ". \n" +
+        "Surface Area is " + surfaceArea() + ". \n" +
+        "Volume is " + volume() + ". \n";
 
         JOptionPane.showMessageDialog(null, message);
 

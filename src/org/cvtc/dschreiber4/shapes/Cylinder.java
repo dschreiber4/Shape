@@ -1,4 +1,4 @@
-package org.cvtc.shapes;
+package org.cvtc.dschreiber4.shapes;
 
 import javax.swing.*;
 
@@ -57,11 +57,11 @@ public class Cylinder extends Shape{
     void render() {
 
 
-        String toString = "\nShape: Cylinder";
-        toString += "\nRadius: " + radius;
-        toString += "\nHeight: " + height;
+        String message = "\nShape: Cylinder";
+        message += "\nRadius: " + radius;
+        message += "\nHeight: " + height;
 
-        JOptionPane.showMessageDialog(null, toString);
+        JOptionPane.showMessageDialog(null, message);
 
     }
 }

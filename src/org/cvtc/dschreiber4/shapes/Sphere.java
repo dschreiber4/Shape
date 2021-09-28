@@ -1,4 +1,4 @@
-package org.cvtc.shapes;
+package org.cvtc.dschreiber4.shapes;
 
 import javax.swing.*;
 
