@@ -2,7 +2,7 @@ package org.cvtc.dschreiber4.shapes;
 
 import javax.swing.*;
 
-public class Cuboid extends Shape {
+public class Cuboid extends Shape implements Renderer {
 
     //Fields
     private float width = 0.0F;
@@ -10,18 +10,14 @@ public class Cuboid extends Shape {
     private float depth = 0.0F;
     private float radius;
 
-
     //Constructor
-    public Cuboid() {
-
-    }
-    //Overload Constructor
-    public Cuboid(float width, float height, float depth) {
+    public Cuboid(Dialog messageBox, float width, float height, float depth) {
+        super();
         this.width = width;
         this.height = height;
         this.depth = depth;
-    }
 
+    }
 
     //Methods
     public float getWidth() {
@@ -48,8 +44,6 @@ public class Cuboid extends Shape {
         this.depth = depth;
     }
 
-
-
     //Overloads
     @Override
     public float surfaceArea() {
@@ -65,18 +59,19 @@ public class Cuboid extends Shape {
     }
 
     @Override
-    void render() {
+    public void renderer() {
+        render();
 
+    }
+
+    @Override
+    public void render() {
         String message = "Shape: Cuboid\n" +
-        "Dimensions: \n" + "Width is " + width + ". \n" +
-        "Height is " + height + ". \n" +
-        "Depth is " + depth + ". \n" +
-        "Surface Area is " + surfaceArea() + ". \n" +
-        "Volume is " + volume() + ". \n";
-
-        JOptionPane.showMessageDialog(null, message);
-
-
-
+            "Dimensions: \n" + "Width is " + width + ". \n" +
+            "Height is " + height + ". \n" +
+            "Depth is " + depth + ". \n" +
+            "Surface Area is " + surfaceArea() + ". \n" +
+            "Volume is " + volume() + ". \n";
+            JOptionPane.showMessageDialog(null, message);
     }
 }

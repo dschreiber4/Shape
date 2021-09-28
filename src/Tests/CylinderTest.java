@@ -1,4 +1,4 @@
-package org.cvtc.dschreiber4.unitTests;
+package Tests;
 import static org.junit.Assert.*;
 
 import org.cvtc.dschreiber4.shapes.Cylinder;

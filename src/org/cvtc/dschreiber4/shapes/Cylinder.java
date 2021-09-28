@@ -2,7 +2,7 @@ package org.cvtc.dschreiber4.shapes;
 
 import javax.swing.*;
 
-public class Cylinder extends Shape{
+public class Cylinder extends Shape implements Renderer {
 
     //Fields
     private float radius = 0.0F;
@@ -10,15 +10,13 @@ public class Cylinder extends Shape{
     private float sA;
     private float vol;
 
-
     //Constructor
-    public Cylinder() {
-
-    }
-    //Overload Constructor
-    public Cylinder(float radius, float height) {
+    public Cylinder(Dialog messageBox, float radius, float height) {
         this.radius = radius;
         this.height = height;
+    }
+
+    public Cylinder(float v, float radius) {
     }
 
     //Methods
@@ -54,14 +52,18 @@ public class Cylinder extends Shape{
     }
 
     @Override
-    void render() {
+    void renderer() {
+        render();
 
+    }
 
-        String message = "\nShape: Cylinder";
-        message += "\nRadius: " + radius;
-        message += "\nHeight: " + height;
-
+    @Override
+    public void render() {
+        String message = "\nShape: Cylinder" +
+        "\nRadius: " + radius +
+        "\nHeight: " + height +
+        "Surface Area is " + surfaceArea() + ". \n" +
+        "Volume is " + volume() + ". \n";
         JOptionPane.showMessageDialog(null, message);
-
     }
 }

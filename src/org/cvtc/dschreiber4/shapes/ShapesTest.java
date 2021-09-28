@@ -10,36 +10,31 @@ public class ShapesTest{
         // import scanner
         Scanner keyboard = new Scanner(System.in);
 
-        // ask user for input and store width in w
+        // Prompt for input and store width in w
         System.out.println("Please enter Width: ");
         float w = positiveValidation((int) keyboard.nextFloat());
 
-        // ask user for input and store height in h
+        // Prompt for input and store height in h
         System.out.println("Please enter Height: ");
         float h = positiveValidation((int) keyboard.nextFloat());
 
-        // ask user for input and store depth in d
+        // Prompt for input and store depth in d
         System.out.println("Please enter Depth: ");
         float d = positiveValidation((int) keyboard.nextFloat());
 
-        // ask user for input and store radius in r
+        // Prompt for input and store radius in r
         System.out.println("Please enter Radius: ");
         float r = positiveValidation((int) keyboard.nextFloat());
 
+        //Create messagebox
+        Dialog messageBox = new MessageBox();
 
-
-        Cuboid cuboid = new Cuboid(w,h,d);
-        Cylinder cylinder = new Cylinder(r,h);
-        Sphere sphere = new Sphere(r);
-
-
-
-        JOptionPane.showMessageDialog(null, cuboid.toString());
-        JOptionPane.showMessageDialog(null, cylinder.toString());
-        JOptionPane.showMessageDialog(null, sphere.toString());
-
-
-
+        Cuboid newCuboid = new Cuboid(messageBox,w,h,d);
+        newCuboid.renderer();
+        Cylinder newCylinder = new Cylinder(messageBox, r, h);
+        newCylinder.renderer();
+        Sphere newSphere = new Sphere(messageBox, r);
+        newSphere.renderer();
 
     }
 
@@ -66,7 +61,7 @@ public class ShapesTest{
             } //-- end while
 
             return validInteger;
-        } //-- end if
+        }
 
-    } //-- end positiveValidation
+    }
 }

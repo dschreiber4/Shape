@@ -1,16 +1,18 @@
-package org.cvtc.dschreiber4.unitTests;
+package Tests;
 
 import static org.junit.Assert.*;
 
 import org.cvtc.dschreiber4.shapes.Cuboid;
+import org.cvtc.dschreiber4.shapes.Dialog;
 import org.junit.Test;
 
 public class CuboidTest {
 
+    private Dialog messageBox;
     // create new cuboid objects
-    Cuboid cuboid1 = new Cuboid(2.5f, 2.5f, 2.5f);
-    Cuboid cuboid2 = new Cuboid(1.5f, 2.5f, 3.5f);
-    Cuboid cuboid3 = new Cuboid(4.0f, 2.5f, 7.0f);
+    Cuboid cuboid1 = new Cuboid(messageBox, 2.5f, 2.5f, 2.5f);
+    Cuboid cuboid2 = new Cuboid(messageBox, 1.5f, 2.5f, 3.5f);
+    Cuboid cuboid3 = new Cuboid(messageBox, 4.0f, 2.5f, 7.0f);
 
     // test surface area
     @Test
